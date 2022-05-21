@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>E-PostMan House</title>
+</head>
+
+<body>
+    <!-- heading    -->
+    <div class="container">
+        <h1 class="heading">Welcome to E-Postman House</h1>
+    </div>
+
+    <!-- container contains form and response -->
+    <div class="container">
+
+        <!-- form-starts -->
+        <form action="#">
+
+            <!-- for taking URL -->
+            <div class="form-group">
+                <label for="url" class="label1">URL:</label>
+                <div class="group">
+                    <input class="input1" type="text" name="url" id="url" placeholder="Enter your URL">
+                </div>
+            </div>
+
+            <!-- for request type -->
+            <div class="form-group">
+                <label for="" class="label1">Request Type</label>
+                <div class="group">
+
+                    <div class="inner-group">
+                        <input class="input2" type="radio" name="request_type" value="GET" id="get">
+                        <label for="get" class="label2">GET:</label>
+                    </div>
+                    <div class="inner-group">
+                        <input class="input2" type="radio" name="request_type" value="POST" id="post">
+                        <label for="post" class="label2">POST:</label>
+                    </div>
+                </div>
+            </div>
+
+            <!--content type Json and params  -->
+            <div class="form-group">
+                <label for="" class="label1">Content Type</label>
+                <div class="group">
+
+                    <div class="inner-group">
+                        <input class="input2" type="radio" name="content_type" value="json" id="json">
+                        <label for="json" class="label2">JSON:</label>
+                    </div>
+                    <div class="inner-group">
+                        <input class="input2" type="radio" name="content_type" value="params" id="custom_parameters">
+                        <label for="custom_parameters" class="label2">Custom Parameters :</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- params  -->
+            <div id="parameters">
+                <div id="addParameters" class="form-group">
+                    <label for="" class="label1">parameter1</label>
+                    <div class="group">
+                        <input class="input1 row" type="text" name="url" id="parameterKey1" placeholder="Enter Parameter 1 Key">
+                        <input class="input1 row" type="text" name="url" id="parameterValue1" placeholder="Enter Parameter 1 value">
+                        <button id="addParams">+</button>
+                    </div>
+                </div> 
+            </div>
+
+            <!-- textarea to enter request json -->
+            <div id="json_textarea" class="form-group">
+                <label for="textarea" class="label1">Enter request json </label>
+                <div class="group">
+                    <textarea class="input1" placeholder="Enter your Json here" name="textarea" id="textarea" cols="102" rows="6"></textarea>
+                </div>
+            </div>
+
+            <!-- form-submit button -->
+            <div class="form-group">
+                <div class="group">
+                    <input id="btn" class="input1" type="submit" value="Submit">
+                </div>
+            </div>
+
+
+        </form>
+
+        <hr>
+
+       <!-- response outside form   -->
+       <div class="form-group">
+           <label for="response" class="label1">Response</label>
+           <div class="group">
+               <div  id="response"  class="input1 response_box">
+                   Your response will appear here
+               </div>
+           </div>
+       </div>
+    </div>
+
+
+    <script src="/index.js"></script>
+</body>
+
+</html>
